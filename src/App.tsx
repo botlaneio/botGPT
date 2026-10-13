@@ -1,3 +1,4 @@
+import ControlSection from "./ControlSection";
 import { useState } from "react";
 import { motion, AnimatePresence, useReducedMotion } from "motion/react";
 import { ArrowRight, ArrowDown, Check, ChevronDown, Menu, X, FileText, Mail, Wallet, CircleCheck, Clock3, ShieldCheck, Sparkles, TrendingUp, BarChart3, Users, Database, LockKeyhole, Zap } from "lucide-react";
@@ -135,4 +136,4 @@ function HowItWorks() {
 }
 function Systems() { return <section className="systems-section" id="systems"><div><span className="section-kicker">THREE LANES. NO CLUTTER.</span><h2>Start with what matters.</h2><p>Three focused operational systems. Built to fit the way your team already works.</p></div><div className="mini-lanes">{lanes.map(l=><a href="#workspace" key={l.id} className="mini-lane"><span className="mini-icon"><LaneIcon lane={l.id} size={18}/></span><strong>{l.name}</strong><span>{l.label}</span><ArrowRight size={17}/></a>)}</div></section>; }
 function Footer(){return <footer id="contact"><div className="contact-banner"><span className="section-kicker">YOUR NEXT STEP</span><h2>Make room for better work.</h2><p>Tell us what your operations look like. We’ll explore what Agent Lane can handle.</p><a className="button-primary" href={contact}>Let's talk <ArrowRight size={18}/></a></div><div className="footer-row"><Brand/><span>© {new Date().getFullYear()} BotLane. Built for the work that matters.</span><a href={contact}>Contact <ArrowRight size={14}/></a></div></footer>}
-export default function App(){return <><Header/><main><Hero/><HowItWorks/><Systems/></main><Footer/></>;}
+export default function App(){return <><Header/><main><Hero/><HowItWorks/><Systems/><ControlSection/></main><Footer/></>;}
